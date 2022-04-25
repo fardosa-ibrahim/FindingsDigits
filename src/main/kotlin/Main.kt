@@ -7,15 +7,15 @@ fun main(args: Array<String>) {
 
     line = line.toLowerCase()
     for (i in 0..line.length - 1) {
-        val ch = line[i]
-        if (ch == 'a' || ch == 'e' || ch == 'i'
-            || ch == 'o' || ch == 'u') {
+        val common = line[i]
+        if (common == 'a' || common == 'e' || common == 'i'
+            || common == 'o' || common == 'u') {
             ++vowels
-        } else if (ch in 'a'..'z') {
+        } else if (common in 'a'..'z') {
             ++consonants
-        } else if (ch in '0'..'9') {
+        } else if (common in '0'..'9') {
             ++digits
-        } else if (ch == ' ') {
+        } else if (common == ' ') {
             ++spaces
         }
     }
